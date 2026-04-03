@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* 大人かわいい：温かいシェルピンク・ダスティローズ・やわらかセージ（派手さは抑え、抜け色で明るさ） */
+:root {
+  --background: #fcf8f8;
+  --foreground: #2b2426;
+  --accent-sky: #c9a3a3;
+  --accent-sky-deep: #4a3538;
+  --accent-mint: #b5c9c0;
+  --accent-mint-deep: #566a62;
+  --surface-sky: #f3eaec;
+  --surface-mint: #eef4f1;
+  --surface-cream: #fff9f9;
+  --surface-warm: #f7eeee;
+  --footer-wood: #e8d8d8;
+  --muted: #6b5a5d;
+  --border-soft: #eadbdb;
+  --luxury-brass: #8f5f62;
+  --accent-blush: #e8a0a8;
+  --accent-lilac: #c4b4d4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent-sky: var(--accent-sky);
+  --color-accent-sky-deep: var(--accent-sky-deep);
+  --color-accent-mint: var(--accent-mint);
+  --color-accent-mint-deep: var(--accent-mint-deep);
+  --color-surface-sky: var(--surface-sky);
+  --color-surface-mint: var(--surface-mint);
+  --color-surface-cream: var(--surface-cream);
+  --color-surface-warm: var(--surface-warm);
+  --color-footer-wood: var(--footer-wood);
+  --color-border-soft: var(--border-soft);
+  --color-luxury-brass: var(--luxury-brass);
+  --color-accent-blush: var(--accent-blush);
+  --color-accent-lilac: var(--accent-lilac);
+  --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-noto-serif-jp), "Noto Serif JP", ui-serif, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* フッター: ローズウッド調のやわらかいテクスチャ */
+.footer-wood {
+  background-color: var(--footer-wood);
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.42) 0%,
+      transparent 48%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(120, 80, 90, 0.05) 3px,
+      rgba(120, 80, 90, 0.05) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 4px,
+      rgba(100, 70, 80, 0.035) 4px,
+      rgba(100, 70, 80, 0.035) 5px
+    );
+  color: #4a3a3e;
+}
+
+/* FAQ: ネイティブ details の見た目を整える */
+details.faq-item > summary {
+  list-style: none;
+}
+details.faq-item > summary::-webkit-details-marker {
+  display: none;
+}

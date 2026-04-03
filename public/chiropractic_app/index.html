@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整体カルテ管理 Pro - プレミアム</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                <div class="brand-name">整体カルテ<span>Pro v1.1</span></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-view="dashboard">
+                    <i class="fas fa-chart-line"></i> <span>ダッシュボード</span>
+                </a>
+                <a href="#" class="nav-item" data-view="patients">
+                    <i class="fas fa-users"></i> <span>患者一覧</span>
+                </a>
+                <a href="#" class="nav-item" data-view="history">
+                    <i class="fas fa-calendar-alt"></i> <span>来院履歴</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">L</div>
+                    <div class="username">管理者</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="app-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="患者名、電話番号で検索...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-icon"><i class="far fa-bell"></i></button>
+                    <button class="btn btn-primary" id="add-patient-btn"><i class="fas fa-plus"></i> 新規患者追加</button>
+                </div>
+            </header>
+
+            <div id="view-container">
+                <!-- Dashboard View -->
+                <section class="view active" id="dashboard-view">
+                    <h1 class="view-title">ダッシュボード</h1>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon bg-blue"><i class="fas fa-user-plus"></i></div>
+                            <div class="stat-info">
+                                <h3>全患者数</h3>
+                                <p class="stat-value" id="total-patients">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon bg-green"><i class="fas fa-calendar-day"></i></div>
+                            <div class="stat-info">
+                                <h3>本日の来院</h3>
+                                <p class="stat-value" id="today-visits">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon bg-orange"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="stat-info">
+                                <h3>離脱予備軍</h3>
+                                <p class="stat-value" id="churn-risk-count">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-content">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>最近の来院患者</h2>
+                                <a href="#" class="text-link" id="view-all-patients-link">すべて見る</a>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>顧客ID</th>
+                                        <th>名前</th>
+                                        <th>電話番号</th>
+                                        <th>最終来院日</th>
+                                        <th>状態</th>
+                                        <th>アクション</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-patients-tbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Patients View -->
+                <section class="view" id="patients-view">
+                    <h1 class="view-title">患者一覧</h1>
+                    <div class="card">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>顧客ID</th>
+                                    <th>名前</th>
+                                    <th>電話番号</th>
+                                    <th>来院回数</th>
+                                    <th>アクション</th>
+                                </tr>
+                            </thead>
+                            <tbody id="all-patients-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- History View -->
+                <section class="view" id="history-view">
+                    <h1 class="view-title">来院履歴</h1>
+                    <div class="card">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>履歴ID</th>
+                                    <th>患者名</th>
+                                    <th>来院日</th>
+                                    <th>症状</th>
+                                    <th>アクション</th>
+                                </tr>
+                            </thead>
+                            <tbody id="visit-history-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Patient Modal -->
+    <div id="patient-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="patient-modal-title">新規患者追加</h2>
+            <form id="patient-form">
+                <input type="hidden" id="edit-patient-id">
+                <div class="form-group">
+                    <label for="name">名前*</label>
+                    <input type="text" id="name" name="patient_name" required placeholder="例：山田 太郎">
+                </div>
+                <div class="form-group">
+                    <label for="phone">電話番号</label>
+                    <input type="tel" id="phone" name="patient_phone" placeholder="例：090-0000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="line_url">LINE URL</label>
+                    <input type="url" id="line_url" name="patient_line" placeholder="https://line.me/...">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary close-modal">キャンセル</button>
+                    <button type="submit" class="btn btn-primary">保存する</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Visit Modal -->
+    <div id="visit-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="visit-modal-title">来院記録の追加</h2>
+            <form id="visit-form">
+                <input type="hidden" id="visit-patient-id">
+                <input type="hidden" id="edit-visit-id">
+                <div class="form-group">
+                    <label for="visit-date">来院日*</label>
+                    <input type="date" id="visit-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="symptoms">症状</label>
+                    <textarea id="symptoms" rows="3" placeholder="痛みや違和感の内容など"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary close-modal">キャンセル</button>
+                    <button type="submit" class="btn btn-primary">記録する</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
