@@ -162,6 +162,14 @@ export const works: WorkItem[] = [
     demoHref: "/chiropractic_app/index_today.html",
     demoLabel: "デモを開く",
   },
+{
+    title: "整体院向け カルテ管理アプリ LP",
+    description:
+      "紙カルテ・Excel管理からの脱却を訴求するLP。ターゲットの課題から逆算した訴求構成と、清潔感のあるデザインディレクションを担当。30日未来院フォローの自動化を軸に設計。",
+    tags: ["LP制作", "訴求設計", "Webディレクション"],
+    demoHref: "https://seitaiapp-mscv7ivw.manus.space/",
+    demoLabel: "LPを見る",
+  },
 ];
 
 export const processSteps = [
