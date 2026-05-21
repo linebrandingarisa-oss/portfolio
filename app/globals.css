@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
-/* 大人かわいい：温かいシェルピンク・ダスティローズ・やわらかセージ（派手さは抑え、抜け色で明るさ） */
+/* Dark tech: #0a0a0a base, purple-to-cyan gradient accents */
 :root {
-  --background: #fcf8f8;
-  --foreground: #2b2426;
-  --accent-sky: #c9a3a3;
-  --accent-sky-deep: #4a3538;
-  --accent-mint: #b5c9c0;
-  --accent-mint-deep: #566a62;
-  --surface-sky: #f3eaec;
-  --surface-mint: #eef4f1;
-  --surface-cream: #fff9f9;
-  --surface-warm: #f7eeee;
-  --footer-wood: #e8d8d8;
-  --muted: #6b5a5d;
-  --border-soft: #eadbdb;
-  --luxury-brass: #8f5f62;
-  --accent-blush: #e8a0a8;
-  --accent-lilac: #c4b4d4;
+  --background: #0a0a0a;
+  --foreground: #f1f5f9;
+  --accent-sky: #7c3aed;
+  --accent-sky-deep: #a855f7;
+  --accent-mint: #0891b2;
+  --accent-mint-deep: #22d3ee;
+  --surface-sky: #0d0d14;
+  --surface-mint: #0a0f12;
+  --surface-cream: #0f0f11;
+  --surface-warm: #111114;
+  --footer-wood: #060608;
+  --muted: #9ca3af;
+  --border-soft: #252528;
+  --luxury-brass: #a855f7;
+  --accent-blush: #22d3ee;
+  --accent-lilac: #818cf8;
 }
 
 @theme inline {
@@ -61,36 +61,34 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
-/* フッター: ローズウッド調のやわらかいテクスチャ */
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #a855f7 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid/dot pattern for hero */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Footer dark */
 .footer-wood {
   background-color: var(--footer-wood);
-  background-image: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.42) 0%,
-      transparent 48%
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 3px,
-      rgba(120, 80, 90, 0.05) 3px,
-      rgba(120, 80, 90, 0.05) 4px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 4px,
-      rgba(100, 70, 80, 0.035) 4px,
-      rgba(100, 70, 80, 0.035) 5px
-    );
-  color: #4a3a3e;
+  background-image: none;
+  color: #6b7280;
 }
 
-/* FAQ: ネイティブ details の見た目を整える */
+/* FAQ */
 details.faq-item > summary {
   list-style: none;
 }

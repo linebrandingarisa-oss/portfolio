@@ -18,11 +18,11 @@ export function FAQ() {
         <div className="mt-10 space-y-3">
           {faqItems.map((item) => (
             <FadeIn key={item.q}>
-              <details className="faq-item group rounded-xl border border-border-soft/80 bg-white/80 open:bg-white open:shadow-sm">
+              <details className="faq-item group rounded-xl border border-border-soft bg-surface-warm open:border-purple-500/30 open:bg-surface-warm open:shadow-[0_0_20px_rgba(168,85,247,0.06)]">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left font-medium text-foreground sm:px-6">
                   <span>{item.q}</span>
                   <span
-                    className="shrink-0 text-muted transition group-open:rotate-180"
+                    className="shrink-0 text-muted transition group-open:rotate-180 group-open:text-purple-400"
                     aria-hidden
                   >
                     <svg
@@ -40,7 +40,7 @@ export function FAQ() {
                     </svg>
                   </span>
                 </summary>
-                <div className="border-t border-border-soft/80 px-5 pb-4 pt-0 text-sm leading-relaxed text-muted sm:px-6">
+                <div className="border-t border-border-soft/60 px-5 pb-4 pt-0 text-sm leading-relaxed text-muted sm:px-6">
                   <div className="max-w-prose pt-3">
                     <p>{item.a}</p>
                   </div>

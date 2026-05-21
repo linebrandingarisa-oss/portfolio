@@ -22,7 +22,7 @@ export default function TokushohoPage() {
           <p className="text-center">
             <Link
               href="/#hero"
-              className="text-sm font-medium text-luxury-brass underline-offset-2 hover:underline"
+              className="text-sm font-medium text-purple-400 underline-offset-2 hover:underline"
             >
               トップへ戻る
             </Link>

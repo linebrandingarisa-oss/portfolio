@@ -11,7 +11,6 @@ const displayName =
 const noteUrl =
   process.env.NEXT_PUBLIC_NOTE_URL?.trim() || profile.noteUrlFallback;
 
-/** 同じファイル名で差し替えたときにキャッシュを抜ける任意の版（例: 20260402） */
 const profilePhotoRevision =
   process.env.NEXT_PUBLIC_PROFILE_PHOTO_REVISION?.trim();
 
@@ -38,11 +37,11 @@ export function Profile() {
           illustration={<ProfileSectionAccent />}
         />
         <FadeIn className="mt-8">
-          <div className="rounded-xl border border-border-soft bg-white p-6 shadow-sm sm:p-10">
+          <div className="rounded-2xl border border-border-soft bg-surface-cream p-6 shadow-[0_0_40px_rgba(168,85,247,0.04)] sm:p-10">
             <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
               {layout === "circle" ? (
                 <div className="mx-auto shrink-0 sm:mx-0">
-                  <div className="relative box-border h-36 w-36 shrink-0 overflow-hidden rounded-full border-2 border-border-soft bg-surface-sky/50 shadow-md sm:h-44 sm:w-44">
+                  <div className="relative box-border h-36 w-36 shrink-0 overflow-hidden rounded-full border-2 border-purple-500/30 bg-surface-sky shadow-[0_0_30px_rgba(168,85,247,0.15)] sm:h-44 sm:w-44">
                     <Image
                       src={photoSrc}
                       alt={alt}
@@ -55,7 +54,7 @@ export function Profile() {
                   </div>
                 </div>
               ) : (
-                <div className="mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl bg-surface-sky/40 shadow-md ring-1 ring-border-soft sm:mx-0 sm:max-w-[min(100%,320px)]">
+                <div className="mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl bg-surface-sky shadow-md ring-1 ring-purple-500/20 sm:mx-0 sm:max-w-[min(100%,320px)]">
                   <div className="relative aspect-[4/5] w-full">
                     <Image
                       src={photoSrc}
@@ -70,12 +69,12 @@ export function Profile() {
                 </div>
               )}
               <div className="min-w-0 flex-1 text-center sm:text-left">
-                <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
+                <h3 className="text-xl font-bold text-foreground sm:text-2xl">
                   {displayName}
                 </h3>
                 <div className="mx-auto mt-3 max-w-prose sm:mx-0">
                   {profile.role ? (
-                    <p className="whitespace-pre-line text-sm font-medium tracking-wide text-luxury-brass sm:text-base">
+                    <p className="whitespace-pre-line text-sm font-semibold tracking-wide text-purple-400 sm:text-base">
                       {profile.role}
                     </p>
                   ) : null}
@@ -100,7 +99,7 @@ export function Profile() {
                   </div>
                 </div>
                 {noteUrl ? (
-                  <div className="mt-8 rounded-lg border border-border-soft bg-surface-cream/50 p-4 sm:p-5">
+                  <div className="mt-8 rounded-xl border border-border-soft bg-surface-warm p-4 sm:p-5">
                     <p className="text-sm font-semibold text-foreground">
                       {note.title}
                     </p>
@@ -108,9 +107,9 @@ export function Profile() {
                       href={noteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 block w-full rounded-lg border-2 border-luxury-brass/45 bg-white px-4 py-3 text-center shadow-sm transition-colors hover:border-luxury-brass hover:bg-surface-cream sm:text-left"
+                      className="mt-3 block w-full rounded-lg border border-purple-500/30 bg-surface-sky px-4 py-3 text-center shadow-sm transition hover:border-purple-500/60 hover:bg-surface-cream sm:text-left"
                     >
-                      <span className="block whitespace-pre-line text-sm font-semibold text-foreground underline decoration-luxury-brass/70 underline-offset-2">
+                      <span className="block whitespace-pre-line text-sm font-semibold text-purple-400 underline-offset-2">
                         {note.linkLabel}
                       </span>
                       <span className="mt-1 block break-all text-xs leading-snug text-muted">
@@ -124,7 +123,7 @@ export function Profile() {
                         width={112}
                         height={112}
                         unoptimized
-                        className="shrink-0 rounded-md border border-border-soft bg-white p-1 shadow-sm"
+                        className="shrink-0 rounded-md border border-border-soft bg-surface-sky p-1 shadow-sm"
                       />
                       <div className="min-w-0 flex-1 pt-0.5 text-left">
                         <div className="text-xs leading-relaxed text-muted">

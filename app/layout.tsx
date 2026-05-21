@@ -18,9 +18,9 @@ const notoSerifJp = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
-  title: "小規模店舗向け Web ツール開発 | 上質な予約・業務アプリ",
+  title: "実装型AIコンサルタント | Claude・GitHub Actions・自動化フロー構築",
   description:
-    "美容室・サロン・整体院など。現場に寄り添う設計で、信頼感のある Web ／業務ツールを短期で。丁寧な進め方です。",
+    "生成AIで業務を仕組み化する実装型AIコンサルタント。Claude API活用のマルチエージェント構築、X投稿完全自動化、LLMO/AIO対策、GBP運用支援。整体院・クリニック・サロン・行政書士向け。",
 };
 
 export default function RootLayout({

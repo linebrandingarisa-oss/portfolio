@@ -18,6 +18,9 @@ export type ContactFormProps = {
   instagramUrl?: string;
 };
 
+const inputClass =
+  "mt-1.5 w-full rounded-xl border border-border-soft bg-surface-warm px-4 py-2.5 text-foreground outline-none transition focus:border-purple-500/60 focus:ring-2 focus:ring-purple-500/20 placeholder:text-muted/40";
+
 export function ContactForm({
   contactEmail,
   xUrl,
@@ -71,12 +74,10 @@ export function ContactForm({
   );
 
   const xDisplay = xUrl ?? placeholderX;
-
-  const instagramHref =
-    instagramUrl?.trim() || contact.instagramUrlFallback;
+  const instagramHref = instagramUrl?.trim() || contact.instagramUrlFallback;
 
   return (
-    <section id="contact" className="scroll-mt-20 bg-white">
+    <section id="contact" className="scroll-mt-20 bg-surface-cream">
       <ContactLeadIn />
       <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <SectionHeadingWithCozy
@@ -86,10 +87,10 @@ export function ContactForm({
         />
 
         <FadeIn className="mt-8">
-          <ul className="mt-6 space-y-2 rounded-xl border border-border-soft/60 bg-surface-cream/50 px-4 py-4 text-left text-xs leading-relaxed text-muted sm:text-sm">
+          <ul className="mt-6 space-y-2 rounded-xl border border-border-soft/60 bg-surface-warm px-4 py-4 text-left text-xs leading-relaxed text-muted sm:text-sm">
             {contact.reassurance.map((line) => (
               <li key={line} className="flex gap-2">
-                <span className="mt-0.5 shrink-0 text-luxury-brass" aria-hidden>
+                <span className="mt-0.5 shrink-0 text-purple-400" aria-hidden>
                   ✓
                 </span>
                 <span>{line}</span>
@@ -102,7 +103,7 @@ export function ContactForm({
           <form
             id="contact-form"
             onSubmit={onSubmit}
-            className="rounded-xl border border-border-soft/80 bg-surface-sky/50 p-6 sm:p-9"
+            className="rounded-2xl border border-border-soft bg-surface-warm p-6 shadow-[0_0_40px_rgba(168,85,247,0.06)] sm:p-9"
           >
             <div className="space-y-5">
               <div>
@@ -111,7 +112,7 @@ export function ContactForm({
                   className="block text-sm font-medium text-foreground"
                 >
                   {contact.labels.name}
-                  <span className="text-red-500">*</span>
+                  <span className="text-red-400">*</span>
                 </label>
                 <input
                   id="contact-name"
@@ -119,7 +120,7 @@ export function ContactForm({
                   autoComplete="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="mt-1.5 w-full rounded-xl border border-border-soft bg-white px-4 py-2.5 text-foreground outline-none ring-accent-sky/0 transition focus:border-accent-sky-deep focus:ring-2 focus:ring-accent-sky/30"
+                  className={inputClass}
                 />
               </div>
               <div>
@@ -128,7 +129,7 @@ export function ContactForm({
                   className="block text-sm font-medium text-foreground"
                 >
                   {contact.labels.email}
-                  <span className="text-red-500">*</span>
+                  <span className="text-red-400">*</span>
                 </label>
                 <input
                   id="contact-email"
@@ -137,7 +138,7 @@ export function ContactForm({
                   autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1.5 w-full rounded-xl border border-border-soft bg-white px-4 py-2.5 text-foreground outline-none transition focus:border-accent-sky-deep focus:ring-2 focus:ring-accent-sky/30"
+                  className={inputClass}
                 />
               </div>
               <div>
@@ -152,7 +153,7 @@ export function ContactForm({
                   name="shopType"
                   value={shopType}
                   onChange={(e) => setShopType(e.target.value)}
-                  className="mt-1.5 w-full rounded-xl border border-border-soft bg-white px-4 py-2.5 text-foreground outline-none transition focus:border-accent-sky-deep focus:ring-2 focus:ring-accent-sky/30"
+                  className={inputClass}
                 >
                   {contact.shopTypeOptions.map((opt) => (
                     <option key={opt.value || "empty"} value={opt.value}>
@@ -167,7 +168,7 @@ export function ContactForm({
                   className="block text-sm font-medium text-foreground"
                 >
                   {contact.labels.message}
-                  <span className="text-red-500">*</span>
+                  <span className="text-red-400">*</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -175,24 +176,26 @@ export function ContactForm({
                   rows={5}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="mt-1.5 w-full resize-y rounded-xl border border-border-soft bg-white px-4 py-2.5 text-foreground outline-none transition focus:border-accent-sky-deep focus:ring-2 focus:ring-accent-sky/30"
+                  className={inputClass + " resize-y"}
                 />
               </div>
             </div>
+
             {error && (
-              <p className="mt-4 text-sm text-red-600" role="alert">
+              <p className="mt-4 text-sm text-red-400" role="alert">
                 {error}
               </p>
             )}
             {success && (
-              <p className="mt-4 text-sm text-accent-mint-deep" role="status">
+              <p className="mt-4 text-sm text-cyan-400" role="status">
                 {contact.submitSuccess}
               </p>
             )}
+
             <button
               type="submit"
               disabled={sending}
-              className="mt-6 w-full rounded-md bg-foreground py-3.5 text-base font-medium tracking-wide text-white shadow-md shadow-stone-900/15 transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-12"
+              className="mt-6 w-full rounded-lg bg-gradient-to-r from-purple-600 to-cyan-500 py-3.5 text-base font-semibold tracking-wide text-white shadow-lg shadow-purple-500/20 transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-12"
             >
               {sending ? contact.submitSending : contact.submit}
             </button>
@@ -200,7 +203,7 @@ export function ContactForm({
               送信により、
               <Link
                 href="/privacy"
-                className="font-medium text-luxury-brass underline-offset-2 hover:underline"
+                className="font-medium text-purple-400 underline-offset-2 hover:underline"
               >
                 プライバシーポリシー
               </Link>
@@ -212,7 +215,7 @@ export function ContactForm({
           </form>
         </FadeIn>
 
-        <FadeIn className="mt-10 rounded-2xl border border-dashed border-border-soft/80 bg-surface-cream/70 p-6">
+        <FadeIn className="mt-10 rounded-2xl border border-dashed border-border-soft bg-surface-warm p-6">
           <p className="text-sm font-semibold text-foreground">
             その他の連絡先（SNS）
           </p>
@@ -223,13 +226,13 @@ export function ContactForm({
                 href={xUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-luxury-brass underline-offset-2 hover:underline"
+                className="font-medium text-purple-400 underline-offset-2 hover:underline"
               >
                 プロフィールを開く
               </a>
             ) : (
               <>
-                <span className="text-muted break-all">{xDisplay}</span>
+                <span className="break-all text-muted">{xDisplay}</span>
                 <span className="ml-2 text-xs text-muted">
                   （NEXT_PUBLIC_X_URL）
                 </span>
@@ -242,7 +245,7 @@ export function ContactForm({
               href={instagramHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-luxury-brass underline-offset-2 hover:underline"
+              className="font-medium text-purple-400 underline-offset-2 hover:underline"
             >
               プロフィールを開く
             </a>
