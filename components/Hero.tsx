@@ -14,13 +14,13 @@ export function Hero() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute bottom-0 -left-32 h-96 w-96 rounded-full bg-cyan-500/8 blur-[100px]"
+        className="pointer-events-none absolute bottom-0 -left-32 h-96 w-96 rounded-full bg-cyan-500/10 blur-[100px]"
         aria-hidden
       />
 
       <div className="relative mx-auto max-w-5xl px-4 py-24 text-center sm:px-6 sm:py-36 lg:px-8">
         <FadeIn>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/8 px-4 py-1.5 text-xs font-medium tracking-widest text-purple-300">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-xs font-medium tracking-widest text-purple-300">
             <span
               className="h-1.5 w-1.5 animate-pulse rounded-full bg-purple-400"
               aria-hidden
@@ -29,9 +29,9 @@ export function Hero() {
           </div>
 
           <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="gradient-text">{hero.title.split("、")[0]}、</span>
+            <span className="gradient-text">{hero.titleGradient}</span>
             <br />
-            <span className="text-foreground">{hero.title.split("、")[1]}</span>
+            <span className="text-foreground">{hero.titlePlain}</span>
           </h1>
         </FadeIn>
 
@@ -50,7 +50,7 @@ export function Hero() {
           </Link>
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center rounded-lg border border-border-soft bg-white/4 px-8 py-3.5 text-base font-semibold text-foreground backdrop-blur-sm transition hover:border-purple-500/50 hover:bg-white/8"
+            className="inline-flex items-center justify-center rounded-lg border border-border-soft bg-white/5 px-8 py-3.5 text-base font-semibold text-foreground backdrop-blur-sm transition hover:border-purple-500/50 hover:bg-white/10"
           >
             {hero.ctaSecondary}
           </Link>

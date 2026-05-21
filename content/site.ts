@@ -8,13 +8,24 @@ export const siteBrand = {
 };
 
 export const hero = {
-  title: "生成AIで業務を仕組み化する、\n実装型AIコンサルタント",
+  titleGradient: "生成AIで業務を仕組み化する、",
+  titlePlain: "実装型AIコンサルタント",
   subtitle:
     "企画・実装・運用を一人で回す。\nClaude・GitHub Actions・自動化フローの構築実績あり",
-  trustLine: "",
   ctaPrimary: "実績を見る",
   ctaSecondary: "お問い合わせ",
 } as const;
+
+export const techStack = [
+  { name: "Claude API" },
+  { name: "GitHub Actions" },
+  { name: "Python" },
+  { name: "Google Workspace API" },
+  { name: "Next.js / React" },
+  { name: "Tailwind CSS" },
+  { name: "LLMO / AIO" },
+  { name: "GBP 運用" },
+] as const;
 
 export const trustBadges = [
   { label: "Google Local Guide", value: "レベル10" },

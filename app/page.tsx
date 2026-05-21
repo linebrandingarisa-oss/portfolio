@@ -8,6 +8,7 @@ import { Profile } from "@/components/Profile";
 import { SectionWave } from "@/components/SectionWave";
 import { Services } from "@/components/Services";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TechStack } from "@/components/TechStack";
 import { Works } from "@/components/Works";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <TechStack />
         <SectionWave tone="white" />
         <Services />
         <SectionWave tone="warm" flip />
