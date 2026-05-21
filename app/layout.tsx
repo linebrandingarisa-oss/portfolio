@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
-import { ScrollBoostToTop } from "@/components/ScrollBoostToTop";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -34,7 +33,6 @@ export default function RootLayout({
       className={`${notoSansJp.variable} ${notoSerifJp.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        <ScrollBoostToTop />
         {children}
       </body>
     </html>
