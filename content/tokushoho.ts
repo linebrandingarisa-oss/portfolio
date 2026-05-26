@@ -14,13 +14,13 @@ export type TokushohoRow = {
 
 /**
  * 販売事業者・運営責任者は .env の NEXT_PUBLIC_TOKUSHOHO_* で上書き可能。
- * 未設定時はテンプレートのプレースホルダを表示します（販売事業者は AI集客ラボ Kanagawa）。
+ * 未設定時は「（未設定）」と表示します。Vercel の環境変数に必ず設定してください。
  */
 export function getTokushohoRows(): TokushohoRow[] {
   const sellerName =
-    publicEnv("NEXT_PUBLIC_TOKUSHOHO_SELLER_NAME") ?? "AI集客ラボ Kanagawa";
+    publicEnv("NEXT_PUBLIC_TOKUSHOHO_SELLER_NAME") ?? "（未設定）";
   const representative =
-    publicEnv("NEXT_PUBLIC_TOKUSHOHO_REPRESENTATIVE") ?? "あなたの氏名";
+    publicEnv("NEXT_PUBLIC_TOKUSHOHO_REPRESENTATIVE") ?? "（未設定）";
 
   return [
     { label: "販売事業者", body: [sellerName] },

@@ -4,7 +4,7 @@ function publicEnv(name: string): string | undefined {
 }
 
 export const siteBrand = {
-  name: publicEnv("NEXT_PUBLIC_SITE_BRAND_NAME") ?? "AI × 自動化",
+  name: process.env.NEXT_PUBLIC_SITE_BRAND_NAME?.trim() || "AI × 自動化",
 };
 
 export const hero = {
