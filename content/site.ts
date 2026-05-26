@@ -11,7 +11,7 @@ export const hero = {
   titleGradient: "生成AIで業務を仕組み化する、",
   titlePlain: "実装型AIコンサルタント",
   subtitle:
-    "企画・実装・運用を一人で回す。\nClaude・GitHub Actions・自動化フローの構築実績あり",
+    "企画・実装・運用を一人で回す。\nClaude・GitHub Actions・自動化フロー・LP制作の実績あり",
   ctaPrimary: "実績を見る",
   ctaSecondary: "お問い合わせ",
 } as const;
@@ -28,7 +28,7 @@ export const techStack = [
 ] as const;
 
 export const trustBadges = [
-  { label: "Google Local Guide", value: "レベル10" },
+  { label: "ブライダル業界", value: "14年" },
   { label: "フリーランス歴", value: "2025年〜" },
   { label: "対応業種", value: "整体院・クリニック・サロン・行政書士" },
 ] as const;
@@ -42,9 +42,9 @@ export const services = [
   },
   {
     illustration: "calendar",
-    title: "X投稿・SNS完全自動化",
+    title: "LP・資料・スライド制作",
     description:
-      "GitHub Actions × スプレッドシート連携で投稿〜分析を自動化。手動ゼロのフローを構築。",
+      "訴求設計から納品まで一人で対応。AIとの協業で制作スピードを保ちながら質を担保します。",
   },
   {
     illustration: "chart",
@@ -112,7 +112,7 @@ export type WorkItem = {
 };
 
 export const worksConversion = {
-  line: "オリジナル制作・ご相談は\nお問い合わせから承ります。",
+  line: "LP・資料作成・自動化のご相談は\nお問い合わせから承ります。",
   linkLabel: "フォームを開く",
   href: "#contact-form",
 } as const;
@@ -133,7 +133,7 @@ export const works: WorkItem[] = [
   {
     title: "LLMO / AIO対策支援",
     description:
-      "大人バレエアカデミー等のコンテンツをAI検索最適化。生成AIへの引用率・認知率を改善するコンテンツ設計を実施。",
+      "大人バレエアカデミー等のコンテンツをAI検索最適化。生成AIに選ばれるコンテンツ設計を実施。",
     tags: ["LLMO", "AIO", "コンテンツ最適化"],
   },
   {
@@ -145,7 +145,7 @@ export const works: WorkItem[] = [
   {
     title: "整体院向け LP（デモ）",
     description:
-      "集客・再来院を訴求する1ページの静的 HTML/CSS 試作。LP 内のお問い合わせボタンはデモ用。",
+      "集客・再来院を訴求する1ページの静的 HTML/CSS サンプル。LP 内のお問い合わせボタンはサンプル用。",
     tags: ["LP", "HTML/CSS"],
     imageSrc: "/works/lp-hero-20260330.png",
     imageAlt: "整体院向けランディングページのヒーロー",
@@ -155,7 +155,7 @@ export const works: WorkItem[] = [
   {
     title: "整体院向け 管理画面デモ",
     description:
-      "患者・来院・予約・フォローなどをまとめた UI の試作。デモ用データのみ。ブラウザで操作可。",
+      "患者・来院・予約・フォローなどをまとめた UI のサンプル。サンプル用データのみ。ブラウザで操作可。",
     tags: ["予約", "CRM", "デモ"],
     imageSrc: "/works/chiropractic-dashboard.png",
     imageAlt: "管理画面ダッシュボード",
