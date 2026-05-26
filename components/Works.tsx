@@ -56,14 +56,26 @@ export function Works() {
                     ))}
                   </ul>
                   {work.demoHref && work.demoLabel ? (
-                    <Link
-                      href={work.demoHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-purple-500/40 bg-purple-500/10 py-2.5 text-sm font-medium tracking-wide text-purple-300 transition hover:bg-purple-500/20 hover:text-purple-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 sm:w-auto sm:self-start sm:px-7"
-                    >
-                      {work.demoLabel}
-                    </Link>
+                    <div className="mt-5 flex flex-wrap gap-3">
+                      <Link
+                        href={work.demoHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex flex-1 items-center justify-center rounded-lg border border-purple-500/40 bg-purple-500/10 px-5 py-2.5 text-sm font-medium tracking-wide text-purple-300 transition hover:bg-purple-500/20 hover:text-purple-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 sm:flex-none"
+                      >
+                        {work.demoLabel}
+                      </Link>
+                      {work.secondDemoHref && work.secondDemoLabel ? (
+                        <Link
+                          href={work.secondDemoHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex flex-1 items-center justify-center rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-medium tracking-wide text-muted transition hover:bg-white/10 hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30 sm:flex-none"
+                        >
+                          {work.secondDemoLabel}
+                        </Link>
+                      ) : null}
+                    </div>
                   ) : null}
                 </div>
               </article>

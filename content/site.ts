@@ -109,6 +109,8 @@ export type WorkItem = {
   imageAlt?: string;
   demoHref?: string;
   demoLabel?: string;
+  secondDemoHref?: string;
+  secondDemoLabel?: string;
 };
 
 export const worksConversion = {
@@ -169,6 +171,16 @@ export const works: WorkItem[] = [
     tags: ["LP制作", "訴求設計", "Webディレクション"],
     demoHref: "https://seitaiapp-mscv7ivw.manus.space/",
     demoLabel: "LPを見る",
+  },
+  {
+    title: "士業向け AIチャットボット導入 LP",
+    description:
+      "行政書士・税理士など、士業事務所向けのAIチャットボット導入LPです。\nよくある質問への一次対応や相談予約への導線を整理し、問い合わせ対応の負担を軽減するイメージを伝える構成で制作しました。\n24時間対応や月約26時間の工数削減試算を見せながら、導入メリットが伝わるように設計しています。\nLP内には、実際に動作を確認できるAIチャットボットデモへの導線も設置しています。",
+    tags: ["LP制作", "AIチャットボット", "士業向け", "問い合わせ導線"],
+    demoHref: "https://jimusho-chatbot.vercel.app",
+    demoLabel: "LPを見る",
+    secondDemoHref: "https://ai-demo-jimusho.vercel.app",
+    secondDemoLabel: "デモを試す",
   },
 ];
 
