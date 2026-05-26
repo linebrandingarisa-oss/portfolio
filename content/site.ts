@@ -23,7 +23,6 @@ export const techStack = [
   { name: "Google Workspace API" },
   { name: "Next.js / React" },
   { name: "Tailwind CSS" },
-  { name: "LLMO / AIO" },
   { name: "GBP 運用" },
 ] as const;
 
