@@ -169,6 +169,8 @@ export const works: WorkItem[] = [
     description:
       "紙カルテ・Excel管理からの脱却を訴求するLP。ターゲットの課題から逆算した訴求構成と、清潔感のあるデザインディレクションを担当。30日未来院フォローの自動化を軸に設計。",
     tags: ["LP制作", "訴求設計", "Webディレクション"],
+    imageSrc: "/works/karute-lp-hero.png",
+    imageAlt: "整体院向けカルテ管理アプリLPのヒーロー",
     demoHref: "https://seitaiapp-mscv7ivw.manus.space/",
     demoLabel: "LPを見る",
   },
@@ -177,6 +179,8 @@ export const works: WorkItem[] = [
     description:
       "行政書士・税理士など、士業事務所向けのAIチャットボット導入LPです。\nよくある質問への一次対応や相談予約への導線を整理し、問い合わせ対応の負担を軽減するイメージを伝える構成で制作しました。\n24時間対応や月約26時間の工数削減試算を見せながら、導入メリットが伝わるように設計しています。\nLP内には、実際に動作を確認できるAIチャットボットデモへの導線も設置しています。",
     tags: ["LP制作", "AIチャットボット", "士業向け", "問い合わせ導線"],
+    imageSrc: "/works/jimusho-chatbot-lp.png",
+    imageAlt: "士業向けAIチャットボット導入LPのヒーロー",
     demoHref: "https://jimusho-chatbot.vercel.app",
     demoLabel: "LPを見る",
     secondDemoHref: "https://ai-demo-jimusho.vercel.app",
