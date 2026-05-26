@@ -17,9 +17,9 @@ const notoSerifJp = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
-  title: "実装型AIコンサルタント | Claude・GitHub Actions・自動化フロー構築",
+  title: "AI集客導線プランナー | Web・AIチャットボット・問い合わせ導線改善",
   description:
-    "生成AIで業務を仕組み化する実装型AIコンサルタント。Claude API活用のマルチエージェント構築、X投稿完全自動化、LLMO/AIO対策、GBP運用支援。整体院・クリニック・サロン・行政書士向け。",
+    "ホームページ、問い合わせフォーム、AIチャットボット、LP制作を組み合わせて、小規模事業者・士業・店舗の相談につながる集客導線を整えます。",
 };
 
 export default function RootLayout({

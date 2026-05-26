@@ -13,7 +13,7 @@ export function Services() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeadingWithCozy
           title="できること"
-          lead="まず、これができます。"
+          lead="ご相談内容に合わせて、必要な部分から整えます。"
           illustration={<ServicesSectionAccent />}
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">

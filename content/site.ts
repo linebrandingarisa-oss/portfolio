@@ -30,7 +30,7 @@ export const techStack = [
 export const trustBadges = [
   { label: "ブライダル業界", value: "14年" },
   { label: "フリーランス歴", value: "2025年〜" },
-  { label: "対応業種", value: "整体院・クリニック・サロン・行政書士" },
+  { label: "対応業種", value: "士業・クリニック・整体院・サロン・小規模事業者" },
 ] as const;
 
 export const services = [
@@ -244,15 +244,15 @@ export const faqItems = [
 
 export const profile = {
   namePlaceholder: "Arisa Nishi",
-  role: "実装型AIコンサルタント / Web開発",
+  role: "AI集客導線プランナー / Web・自動化支援",
   photo: {
     src: "/profile/arisa-portrait.png",
     layout: "circle" as "circle" | "feature",
   },
   bio: [
-    "ブライダル業界で約14年、現場運営・予約調整・\nお客様対応を通じて「業務を回す」ことの\nリアルを体感してきました。",
-    "フリーランス転向後は生成AIと自動化に特化。\nClaude APIを使ったマルチエージェント構築から\nGitHub Actionsによる完全自動化フローまで\n一人で設計・実装します。",
-    "「何から始めればいいか分からない」段階から\nご相談ください。まず小さく動かして、\n一緒に育てていくスタイルです。",
+    "ブライダル業界で約14年、現場運営・予約調整・お客様対応を通じて、\n「人が迷わず相談できる導線」の大切さを体感してきました。",
+    "現在は、ホームページ・LP・問い合わせフォーム・AIチャットボット・業務自動化を組み合わせ、\n小規模事業者や士業の方が相談につながる流れを整える支援をしています。",
+    "難しい技術説明よりも、まずは現状を伺い、\n必要な部分から小さく整えていくスタイルです。",
   ],
   stance: [
     "動くものを最短で。試してから広げる。",
@@ -288,10 +288,12 @@ export const contact = {
   },
   shopTypeOptions: [
     { value: "", label: "選択してください" },
-    { value: "AI・自動化の相談", label: "AI・自動化の相談" },
-    { value: "LLMO/AIO対策", label: "LLMO/AIO対策" },
-    { value: "GBP・集客導線", label: "GBP・集客導線" },
+    { value: "AIチャットボット導入", label: "AIチャットボット導入" },
+    { value: "士業向け問い合わせ導線", label: "士業向け問い合わせ導線" },
     { value: "Web制作・LP", label: "Web制作・LP" },
+    { value: "GBP・集客導線", label: "GBP・集客導線" },
+    { value: "AI・自動化の相談", label: "AI・自動化の相談" },
+    { value: "資料作成・提案資料", label: "資料作成・提案資料" },
     { value: "その他", label: "その他" },
   ],
   submit: "相談内容を送信する",

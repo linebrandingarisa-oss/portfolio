@@ -38,16 +38,16 @@ export function Profile() {
         />
         <FadeIn className="mt-8">
           <div className="rounded-2xl border border-border-soft bg-surface-cream p-6 shadow-[0_0_40px_rgba(168,85,247,0.04)] sm:p-10">
-            <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
+            <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
               {layout === "circle" ? (
                 <div className="mx-auto shrink-0 sm:mx-0">
-                  <div className="relative box-border h-36 w-36 shrink-0 overflow-hidden rounded-full border-2 border-purple-500/30 bg-surface-sky shadow-[0_0_30px_rgba(168,85,247,0.15)] sm:h-44 sm:w-44">
+                  <div className="relative box-border h-36 w-36 shrink-0 overflow-hidden rounded-full border-2 border-purple-500/30 bg-surface-sky shadow-[0_0_30px_rgba(168,85,247,0.15)] sm:h-40 sm:w-40">
                     <Image
                       src={photoSrc}
                       alt={alt}
                       fill
                       unoptimized
-                      sizes="(max-width: 640px) 144px, 176px"
+                      sizes="(max-width: 640px) 144px, 160px"
                       className="origin-center translate-x-[1mm] scale-[1.18] object-cover object-center"
                       priority
                     />
