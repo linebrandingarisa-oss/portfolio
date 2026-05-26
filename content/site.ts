@@ -125,24 +125,24 @@ export const works: WorkItem[] = [
     description:
       "Claude APIを活用した複数エージェントの並列実行システム。タスク分解・実行・集約を自動化。スケジューラと組み合わせてノーコードで運用可能。",
     tags: ["Claude API", "マルチエージェント", "Python"],
+    imageSrc: "/works/multi-agent-system.png",
+    imageAlt: "マルチエージェントシステム構築のオーケストレーション画面",
   },
   {
     title: "X投稿完全自動化フロー",
     description:
       "GitHub Actions × Googleスプレッドシート連携で投稿スケジュール管理から公開まで完全自動化。毎日の手動投稿をゼロに。",
     tags: ["GitHub Actions", "Google Sheets API", "自動化"],
-  },
-  {
-    title: "LLMO / AIO対策支援",
-    description:
-      "大人バレエアカデミー等のコンテンツをAI検索最適化。生成AIに選ばれるコンテンツ設計を実施。",
-    tags: ["LLMO", "AIO", "コンテンツ最適化"],
+    imageSrc: "/works/x-auto-post.png",
+    imageAlt: "X投稿完全自動化フローのルーチン設定画面",
   },
   {
     title: "GBP運用支援",
     description:
       "整体院・クリニック・高級ジム等のGoogleビジネスプロフィール最適化。SNS導線・予約フローとセットで集客を改善。",
     tags: ["GBP", "集客", "ローカルSEO"],
+    imageSrc: "/works/gbp-dashboard.png",
+    imageAlt: "GBP運用支援のGoogleビジネスプロフィール管理画面",
   },
   {
     title: "整体院向け LP（デモ）",
