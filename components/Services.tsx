@@ -12,8 +12,8 @@ export function Services() {
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeadingWithCozy
-          title="サービス紹介"
-          lead="生成AI・自動化・集客導線を、現場で動く形に。"
+          title="できること"
+          lead="まず、これができます。"
           illustration={<ServicesSectionAccent />}
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">

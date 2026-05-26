@@ -8,12 +8,12 @@ export const siteBrand = {
 };
 
 export const hero = {
-  titleGradient: "生成AIで業務を仕組み化する、",
-  titlePlain: "実装型AIコンサルタント",
+  titleGradient: "問い合わせ対応・集客導線を、",
+  titlePlain: "AIとWebで整えます",
   subtitle:
-    "企画・実装・運用を一人で回す。\nClaude・GitHub Actions・自動化フロー・LP制作の実績あり",
-  ctaPrimary: "実績を見る",
-  ctaSecondary: "お問い合わせ",
+    "ホームページ、Google、note、SNS、問い合わせフォーム、AIチャットボットを組み合わせて、\n「見られるだけ」で終わらない、相談につながる導線を作ります。",
+  ctaPrimary: "制作実績を見る",
+  ctaSecondary: "無料相談する",
 } as const;
 
 export const techStack = [
@@ -36,27 +36,27 @@ export const trustBadges = [
 export const services = [
   {
     illustration: "sparkle",
-    title: "生成AI業務自動化",
+    title: "AIチャットボット導入",
     description:
-      "Claude APIを活用したマルチエージェント設計・実装。繰り返し業務を仕組みに変えます。",
-  },
-  {
-    illustration: "calendar",
-    title: "LP・資料・スライド制作",
-    description:
-      "訴求設計から納品まで一人で対応。AIとの協業で制作スピードを保ちながら質を担保します。",
-  },
-  {
-    illustration: "chart",
-    title: "LLMO / AIO対策支援",
-    description:
-      "AI検索・生成AIに選ばれるコンテンツ設計。記事・プロフィール・ページ構成を最適化。",
+      "よくある質問への一次対応や、相談予約前の案内を自動化します。",
   },
   {
     illustration: "globe",
-    title: "GBP・集客導線の整理",
+    title: "問い合わせ導線の改善",
     description:
-      "Googleビジネスプロフィール運用・SNS・予約導線を一気通貫で整理・最適化します。",
+      "HP・LP・フォーム・AIチャットボットを整え、相談につながる流れを作ります。",
+  },
+  {
+    illustration: "calendar",
+    title: "集客ページ・資料制作",
+    description:
+      "LP、サービス紹介ページ、提案資料、note記事などを目的に合わせて制作します。",
+  },
+  {
+    illustration: "chart",
+    title: "業務自動化フロー構築",
+    description:
+      "投稿管理、通知、レポート作成など、繰り返し作業をAIやツールで仕組み化します。",
   },
 ] as const;
 
@@ -121,12 +121,34 @@ export const worksConversion = {
 
 export const works: WorkItem[] = [
   {
-    title: "マルチエージェントシステム構築",
+    title: "士業向け AIチャットボット導入 LP",
     description:
-      "Claude APIを活用した複数エージェントの並列実行システム。タスク分解・実行・集約を自動化。スケジューラと組み合わせてノーコードで運用可能。",
-    tags: ["Claude API", "マルチエージェント", "Python"],
-    imageSrc: "/works/multi-agent-system.png",
-    imageAlt: "マルチエージェントシステム構築のオーケストレーション画面",
+      "行政書士・税理士など、士業事務所向けのAIチャットボット導入LPです。\nよくある質問への一次対応や相談予約への導線を整理し、問い合わせ対応の負担を軽減するイメージを伝える構成で制作しました。\n24時間対応や月約26時間の工数削減試算を見せながら、導入メリットが伝わるように設計しています。\nLP内には、実際に動作を確認できるAIチャットボットデモへの導線も設置しています。",
+    tags: ["LP制作", "AIチャットボット", "士業向け", "問い合わせ導線"],
+    imageSrc: "/works/jimusho-chatbot-lp.png",
+    imageAlt: "士業向けAIチャットボット導入LPのヒーロー",
+    demoHref: "https://jimusho-chatbot.vercel.app",
+    demoLabel: "LPを見る",
+    secondDemoHref: "https://ai-demo-jimusho.vercel.app",
+    secondDemoLabel: "デモを試す",
+  },
+  {
+    title: "整体院向け カルテ管理アプリ LP",
+    description:
+      "紙カルテ・Excel管理からの脱却を訴求するLP。ターゲットの課題から逆算した訴求構成と、清潔感のあるデザインディレクションを担当。30日未来院フォローの自動化を軸に設計。",
+    tags: ["LP制作", "訴求設計", "Webディレクション"],
+    imageSrc: "/works/karute-lp-hero.png",
+    imageAlt: "整体院向けカルテ管理アプリLPのヒーロー",
+    demoHref: "https://seitaiapp-mscv7ivw.manus.space/",
+    demoLabel: "LPを見る",
+  },
+  {
+    title: "GBP運用支援",
+    description:
+      "整体院・クリニック・高級ジム等のGoogleビジネスプロフィール最適化。SNS導線・予約フローとセットで集客を改善。",
+    tags: ["GBP", "集客", "ローカルSEO"],
+    imageSrc: "/works/gbp-dashboard.png",
+    imageAlt: "GBP運用支援のGoogleビジネスプロフィール管理画面",
   },
   {
     title: "X投稿完全自動化フロー",
@@ -137,12 +159,12 @@ export const works: WorkItem[] = [
     imageAlt: "X投稿完全自動化フローのルーチン設定画面",
   },
   {
-    title: "GBP運用支援",
+    title: "マルチエージェントシステム構築",
     description:
-      "整体院・クリニック・高級ジム等のGoogleビジネスプロフィール最適化。SNS導線・予約フローとセットで集客を改善。",
-    tags: ["GBP", "集客", "ローカルSEO"],
-    imageSrc: "/works/gbp-dashboard.png",
-    imageAlt: "GBP運用支援のGoogleビジネスプロフィール管理画面",
+      "Claude APIを活用した複数エージェントの並列実行システム。タスク分解・実行・集約を自動化。スケジューラと組み合わせてノーコードで運用可能。",
+    tags: ["Claude API", "マルチエージェント", "Python"],
+    imageSrc: "/works/multi-agent-system.png",
+    imageAlt: "マルチエージェントシステム構築のオーケストレーション画面",
   },
   {
     title: "整体院向け LP（デモ）",
@@ -163,28 +185,6 @@ export const works: WorkItem[] = [
     imageAlt: "管理画面ダッシュボード",
     demoHref: "/chiropractic_app/index_today.html",
     demoLabel: "デモを開く",
-  },
-{
-    title: "整体院向け カルテ管理アプリ LP",
-    description:
-      "紙カルテ・Excel管理からの脱却を訴求するLP。ターゲットの課題から逆算した訴求構成と、清潔感のあるデザインディレクションを担当。30日未来院フォローの自動化を軸に設計。",
-    tags: ["LP制作", "訴求設計", "Webディレクション"],
-    imageSrc: "/works/karute-lp-hero.png",
-    imageAlt: "整体院向けカルテ管理アプリLPのヒーロー",
-    demoHref: "https://seitaiapp-mscv7ivw.manus.space/",
-    demoLabel: "LPを見る",
-  },
-  {
-    title: "士業向け AIチャットボット導入 LP",
-    description:
-      "行政書士・税理士など、士業事務所向けのAIチャットボット導入LPです。\nよくある質問への一次対応や相談予約への導線を整理し、問い合わせ対応の負担を軽減するイメージを伝える構成で制作しました。\n24時間対応や月約26時間の工数削減試算を見せながら、導入メリットが伝わるように設計しています。\nLP内には、実際に動作を確認できるAIチャットボットデモへの導線も設置しています。",
-    tags: ["LP制作", "AIチャットボット", "士業向け", "問い合わせ導線"],
-    imageSrc: "/works/jimusho-chatbot-lp.png",
-    imageAlt: "士業向けAIチャットボット導入LPのヒーロー",
-    demoHref: "https://jimusho-chatbot.vercel.app",
-    demoLabel: "LPを見る",
-    secondDemoHref: "https://ai-demo-jimusho.vercel.app",
-    secondDemoLabel: "デモを試す",
   },
 ];
 

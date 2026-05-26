@@ -22,9 +22,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <TechStack />
-        <SectionWave tone="white" />
         <Services />
+        <TechStack />
         <SectionWave tone="warm" flip />
         <BookingDetail />
         <SectionWave tone="white" />

@@ -25,7 +25,7 @@ export function Hero() {
               className="h-1.5 w-1.5 animate-pulse rounded-full bg-purple-400"
               aria-hidden
             />
-            実装型 AI コンサルタント
+            AI集客導線プランナー / Web・自動化支援
           </div>
 
           <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
