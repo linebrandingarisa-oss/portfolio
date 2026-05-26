@@ -262,9 +262,9 @@ export const profile = {
   note: {
     title: "note",
     linkLabel: "記事・コラムを開く\n（新しいタブ）",
-    qrSectionLabel: "または\nQRコードから",
+    qrSectionLabel: "QRコードからも開けます。",
     qrAlt: "note プロフィールページへの QR コード",
-    qrCaption: "スマホのカメラで\n読み取っても\n開けます。",
+    qrCaption: "スマートフォンのカメラで読み取ってください。",
   },
 } as const;
 

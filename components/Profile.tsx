@@ -130,15 +130,8 @@ export function Profile() {
                           <span className="mb-1 block whitespace-pre-line font-medium text-muted">
                             {note.qrSectionLabel}
                           </span>
-                          {note.qrCaption.split("\n").map((line, i, arr) => (
-                            <span
-                              key={i}
-                              className={
-                                i === arr.length - 1
-                                  ? "block whitespace-nowrap"
-                                  : "block"
-                              }
-                            >
+                          {note.qrCaption.split("\n").map((line, i) => (
+                            <span key={i} className="block">
                               {line}
                             </span>
                           ))}
